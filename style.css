@@ -3,33 +3,55 @@
 body{
     position: relative;
     display: flex; 
-    flex-direction: row-reverse;
-    align-self: flex-end;
+    flex-direction: column;
+    gap: 50px;
 }
 
-img{
-    margin: 40px;
+.logo_alura{
+    margin: 40px 0px 0px 50px; 
+
 }
 .contenedor_principal {
+    display: flex;
     color: #0A3871;
     font-family: inter, sans-serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 48px;
     width: 577px;
-    margin: 10%;
-    height: 48px;
+    margin: 0% 0% 0% 10%;
+    height: 350px;
+    border: none;
+    outline: none;    
+}
+
+.texto{
+    gap: 8px; 
+    height: 18px;
+    width: 280px;
+    font-size: 12px;
+    font-family: inter, sans-serif;
+    color: #495057;
+}
+
+.logo_interrogacion{
+    width: 16px;
+    height: 16px;
 }
 
 div{
+    margin-left: 50px;
+    gap: 24px;
     display: flex;
 }
+
 .boton1{
     background-color: #0A3871;
     width: 328px;
     height: 67px;
     border-radius: 24px;
     color: white;
+    font-size: 16px; font-family: inter, sans-serif;
     font-size: 16px;
 }
 
