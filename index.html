@@ -1,34 +1,36 @@
-        <!DOCTYPE html>
-        <html lang="es">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Encriptador</title>
-            <link rel="stylesheet" href="style.css">
-                
-        </head>
-        <body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Encriptador ✨</title>
+    <link rel="stylesheet" href="prueba.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon_io/site.webmanifest"></head>
+<body>
 
-        <div class="contenedor">
-            <img class="logo_alura" src="./images/Logo.png" alt="Logo Alura" width="120px" height="48px">
-            <textarea class="area_texto" placeholder="Ingrese su texto aqui"></textarea>
+<main class="contenedor">
+    <img class="logo_alura" src="./images/Logo.png" alt="Logo Alura" width="120px" height="48px">
+    <textarea class="area_texto" placeholder="Ingrese su texto aqui"></textarea>
 
-            <div class="texto">
-                <img class="logo_interrogacion" src="./images/bi_exclamation-circle-fill.png" alt="logo de interrogación">Solo letras minúsculas y sin ascentos</div>
+    <div class="texto">
+        <img class="logo_interrogacion" src="./images/bi_exclamation-circle-fill.png" alt="logo de interrogación">Solo letras minúsculas y sin ascentos</div>
 
-        <footer>
-            <button class="boton1">Encriptar</button>
-            <button class="boton2">Desencriptar</button>
-        </footer>
-    </div>  
+<section>
+    <button class="boton_encriptar" onclick="encriptar();">Encriptar</button>
+    <button class="boton_desencriptado" onclick="desencriptar();">Desencriptar</button>
+</section>
+</main>  
 
-    
-    <section class="contenedor_secundario"><!--<img class="rectangulo" src="./images/Rectangle 1.png" alt="Rectangulo blanco">-->
-        <img class="muñeco" src="./images/Muñeco.png" alt="Muñeco">
-        <h2><strong>Ningun mensaje fue encontrado</strong></h2>
-    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-    </section>
+<section class="contenedor_secundario">
+<img class="muñeco" src="./images/Muñeco.png" alt="Muñeco">
+<h2 class="texto_encriptado"><strong>Ningun mensaje fue encontrado</strong></h2>
+<textarea class="area_salida" placeholder="Ingresa el texto que desencriptar o encriptar" readonly></textarea>
+<button class="copiar" onclick="copiarTexto();">Copiar</button>
+</section>
 
-        
-    </body>
-    </html>
+<script src="prueba.js"></script>
+</body>
+</html>
