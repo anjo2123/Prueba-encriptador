@@ -1,14 +1,12 @@
 const numberOfParticles = 150; // Número de estrellas
 const numberOfDustParticles = 300; // Número de partículas de polvo
 const botonCopiar = document.querySelector(".copiar");
-let texto = document.querySelector(".mensaje");
 
-// Crear estrellas
-// Crear estrellas
+// Crear estrellas de tamaños de 3 a 4 px y colores variados.
 for (let i = 0; i < numberOfParticles; i++) {
     const particle = document.createElement('div');
-    const size = Math.random() * 3 + 1; // Tamaños aleatorios entre 1px y 4px
-    const color = `hsl(${Math.random() * 360}, 100%, ${Math.random() * 50 + 50}%)`; // Colores variados
+    const size = Math.random() * 3 + 1; 
+    const color = `hsl(${Math.random() * 360}, 100%, ${Math.random() * 50 + 50}%)`; 
 
     particle.classList.add('particle');
     particle.style.width = `${size}px`;
@@ -27,29 +25,29 @@ for (let i = 0; i < numberOfParticles; i++) {
 // Crear polvo cósmico
 for (let i = 0; i < numberOfDustParticles; i++) {
     const dust = document.createElement('div');
-    const size = Math.random() * 1.5 + 0.5; // Tamaños más pequeños para el polvo
+    const size = Math.random() * 1.5 + 0.5;
 
     dust.classList.add('dust');
     dust.style.width = `${size}px`;
     dust.style.height = `${size}px`;
     dust.style.top = `${Math.random() * 100}%`;
     dust.style.left = `${Math.random() * 100}%`;
-    dust.style.opacity = Math.random() * 0.3 + 0.1; // Opacidad más baja
+    dust.style.opacity = Math.random() * 0.3 + 0.1; 
 
     document.querySelector('.dust').appendChild(dust);
 }
 
-// Crear estrellas fugaces
+// Crear estrellas fugaces y lugar de aparición de las estrellas fugases.
 function createShootingStar() {
     const star = document.createElement('div');
     star.classList.add('shooting-star');
 
     const startY = Math.random() * window.innerHeight;
-    const startX = -150; // Inicialmente fuera de la pantalla a la izquierda
+    const startX = -150; 
     star.style.top = `${startY}px`;
     star.style.left = `${startX}px`;
 
-    // Variación en la velocidad
+    // Variación en la velocidad en las estrellas
     const duration = Math.random() * 1.5 + 1.5;
     star.style.setProperty('--duration', `${duration}s`);
 
@@ -109,7 +107,7 @@ document.addEventListener('mousemove', (e) => {
 
 botonCopiar.style.display = "none";
 
-// Funciones de encriptar y desencriptar
+// Funciones para el remplazo de las vocales. 
 function reemplazarVocales(texto) {
     return texto
         .replace(/e/g, "enter")
@@ -127,8 +125,8 @@ function desencriptarTexto(texto) {
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 }
-// Función para mostrar el modal
-// Función para mostrar el modal
+
+// Función para mostrar las alertas y el estilo que van a tener respecto a la ocación. 
 function showModal(message, isSuccess = false) {
     const modal = document.getElementById('modal');
     const modalMessage = document.getElementById('modal-message');
@@ -139,33 +137,33 @@ function showModal(message, isSuccess = false) {
     if (isSuccess) {
         modalTitle.textContent = "Copiado";
         modalTitle.style.color = 'rgb(107, 255, 107)';
-        successIcon.style.display = 'inline'; // Mostrar ícono de éxito
-        errorIcon.style.display = 'none'; // Ocultar ícono de error
+        successIcon.style.display = 'inline';
+        errorIcon.style.display = 'none'; 
         modalMessage.textContent = message;
-        modalMessage.style.color = 'white'; // Texto del mensaje en blanco
+        modalMessage.style.color = 'white'; 
     } else {
         modalTitle.textContent = "Oops!";
         modalTitle.style.color = 'red';
-        successIcon.style.display = 'none'; // Ocultar ícono de éxito
-        errorIcon.style.display = 'inline'; // Mostrar ícono de error
+        successIcon.style.display = 'none';
+        errorIcon.style.display = 'inline'; 
         modalMessage.textContent = message;
-        modalMessage.style.color = 'white'; // Texto del mensaje en blanco
+        modalMessage.style.color = 'white';
     }
 
     modal.style.display = 'block';
 
     setTimeout(() => {
         modal.style.display = 'none';
-    }, 10000); // Mostrar el modal por 3 segundos
+    }, 10000);
 }
 
-// Función para cerrar el modal
+// Función para cerrar las alertas
 function closeModal() {
     const modal = document.getElementById('modal');
     modal.style.display = 'none';
 }
 
-// Event listener para el botón de cerrar modal
+// Event listener para el botón de cerrar las alertas.
 document.querySelector('.close').addEventListener('click', closeModal);
 
 // Funciones para encriptar y desencriptar
@@ -177,12 +175,12 @@ function encriptar() {
     if (textoIngresado.trim().length === 0) {
         showModal("No ha ingresado texto, por favor añada su mensaje");
         areaSalida.value = "";
-        botonCopiar.style.display = "none"; // Ocultar el botón si no hay texto
+        botonCopiar.style.display = "none";
         cambioTexto = document.querySelector(".texto_encriptado").textContent = "Ningun mensaje fue encontrado";
     } else {
         const textoReemplazado = reemplazarVocales(textoIngresado);
         areaSalida.value = textoReemplazado;
-        botonCopiar.style.display = "block"; // Mostrar el botón de copiar después de encriptar
+        botonCopiar.style.display = "block";
         document.querySelector(".texto_encriptado").textContent = "Texto encriptado correctamente";
     }
 }
@@ -195,11 +193,11 @@ function desencriptar() {
     if (textoIngresado.trim().length === 0) {
         showModal("No ha ingresado texto, por favor añada su mensaje");
         areaSalida.value = "";
-        botonCopiar.style.display = "none"; // Ocultar el botón si no hay texto
+        botonCopiar.style.display = "none"; 
     } else {
         const textoReemplazado = desencriptarTexto(textoIngresado);
         areaSalida.value = textoReemplazado;
-        botonCopiar.style.display = "block"; // Mostrar el botón de copiar después de desencriptar
+        botonCopiar.style.display = "block"; 
         document.querySelector(".texto_encriptado").textContent = "Texto desencriptado correctamente";
     }
 }
@@ -209,7 +207,7 @@ function copiarTexto() {
     const texto = textareaSalida.value;
     if (texto) {
         navigator.clipboard.writeText(texto).then(() => {
-            showModal("Texto copiado con éxito!", true); // Mostrar el modal de éxito
+            showModal("Texto copiado con éxito!", true);
         }).catch(err => {
             console.error('Error al copiar el texto:', err);
         });

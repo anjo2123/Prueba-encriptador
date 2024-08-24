@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fondo Estrellado Realista</title>
+    <title>Encriptador de texto</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Contenedor para los diálogos modales -->
+    <!-- Contenedor para las alertas, contiene los iconos de error y exito. -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modal-header">
                 <i class="fas fa-exclamation-triangle error-icon"></i>
-                <i class="fas fa-check success-icon"></i> <!-- Icono de éxito -->
+                <i class="fas fa-check success-icon"></i>
                 <h2 id="modal-title">Oops!</h2>
             </div>
             <p id="modal-message">No ha ingresado texto, por favor añada su mensaje.</p>
@@ -32,7 +32,9 @@
     <!-- Capa de polvo cósmico -->
     <div class="layer dust"></div>
 
+    <!--Contenedor principal del sitio, contiene todos los elementos a excepción del fondo estrellado.-->
     <main class="contenedor_principal">
+        
         <section class="contenedor_secundario">
             <textarea class="area_texto" placeholder="Ingresa el texto"></textarea>
             <section class="botones">
