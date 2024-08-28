@@ -1,4 +1,4 @@
-body {
+body {   
     margin: 0;
     overflow: hidden;
     background-color: black;
@@ -9,41 +9,19 @@ body {
 .titulo {
   font-family: 'Orbitron', sans-serif;  
   display: inline-block;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-top: 6%;
+  flex-wrap: wrap;
   align-self: center;
-  white-space: nowrap;
   margin-bottom: -2%;
   overflow: hidden;
-  border-right: 0.15em solid white; /* Cursor de escritura */
-  animation: typing 3.5s steps(30, end) infinite, wait 7s 3.5s steps(30) forwards, blink-caret 0.75s step-end infinite;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('./images/espacio.jpg');
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('./images/constelacion.jpg');
   background-clip: text;
   -webkit-background-clip: text;
   filter: drop-shadow(0px 0px 1px #fff);    
-
   color: transparent;    
   background-position: center;
 }
-
-@keyframes typing {
-  0% { width: 0; }           /* Comienza con el texto oculto desde la izquierda */
-  50% { width: 37%; }        /* El texto se muestra completamente */
-  100% { width: 37%; }       /* Mantiene el texto visible antes de ocultarse */
-}
-
-@keyframes wait {
-  0% { width: 37%; }        /* Mantiene el texto visible durante el retraso */
-  50% { width: 0; } 
-  100% { width: 37%; }        /* Mantiene el texto visible durante el retraso */
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #0ef; }
-  
-}
-
 
   
 .layer {
@@ -510,6 +488,11 @@ textarea::placeholder {
         height: 100vh;
         justify-content: center;
     }
+
+.titulo{
+    font-size: 1.5em;
+    font-family: 'Orbitron', sans-serif;
+}
 
     .botones{
         display: flex;
