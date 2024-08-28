@@ -14,6 +14,11 @@ En este encriptador se busco darle un estilo cosmico para generar un grato inter
 <h3><strong>Contenedor terciario</strong></h3><br>Contiene el área de salida del texto encriptado el cual se encuentra definido por una etiqueta textarea,  y el botón de copiar el cual aparece después de ingresar algún texto,
 este genera una alerta la cual dice que el mensaje fue copiado con exito.
 
- hay un cuarto contenedor el cual es el de las alertas que aparecen cuando no se ingresa texto y se intenta desencriptar y encriptar y también cuando se copia correctamente el texto. este contiene los iconos y el mensaje que va a aparecer en dicha alerta. </p>
+<br>
+<br>
+<h3><strong>Cuarto contenedor</strong></h3> el cual es el de las alertas que aparecen cuando no se ingresa texto y se intenta desencriptar y encriptar y también cuando se copia correctamente el texto. este contiene los iconos y el mensaje que va a aparecer en dicha alerta.
+
+
+<h2>CONTINUARA...</h2>
 
 
