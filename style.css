@@ -477,10 +477,6 @@ textarea::placeholder {
 
 @media (max-width: 375px) and (max-height: 933px){ /*Responsive para pantallas de 375px a 933px*/
 
-    body{
-   ::-webkit-scrollbar {
-    display: none;
-    }
     .contenedor_principal{
         display: flex;
         flex-direction: column;
